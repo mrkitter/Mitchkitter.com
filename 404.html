@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Page Not Found | Mitch Kitter</title>
+  <meta name="description" content="The page you're looking for couldn't be found." />
+  <meta name="robots" content="noindex" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .error-code {
+      font-family: var(--font-mono, monospace);
+      font-size: clamp(5rem, 18vw, 11rem);
+      line-height: 1;
+      font-weight: 500;
+      color: var(--color-accent, #00B4D8);
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+    .error-title {
+      font-family: var(--font-heading, sans-serif);
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      color: var(--color-text-primary, #F0F4F8);
+      margin: 0.75rem 0 0;
+    }
+    .error-text {
+      font-family: var(--font-body, sans-serif);
+      color: var(--color-text-secondary, #9FB3C8);
+      max-width: 30rem;
+      margin: 1rem auto 2rem;
+      line-height: 1.7;
+    }
+    .error-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .error-wordmark {
+      position: absolute;
+      top: 1.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-heading, sans-serif);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--color-text-primary, #F0F4F8);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <a href="/" class="error-wordmark">MITCH KITTER</a>
+    <p class="error-code">404</p>
+    <h1 class="error-title">This trail leads nowhere.</h1>
+    <p class="error-text">
+      The page you're looking for doesn't exist or may have moved. Let's get you back to solid ground.
+    </p>
+    <div class="error-links">
+      <a href="/" class="btn btn-primary">Back to Home</a>
+      <a href="/blog.html" class="btn btn-outline">Read the Blog</a>
+    </div>
+  </main>
+</body>
+</html>
