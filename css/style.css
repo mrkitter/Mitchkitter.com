@@ -800,6 +800,29 @@ ul {
   line-height: 1.55;
 }
 
+.threat-map-figure {
+  margin: 2.5rem 0;
+}
+
+.threat-map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 180, 216, 0.08), var(--shadow-card);
+}
+
+.threat-map-caption {
+  margin-top: 0.85rem;
+  max-width: 900px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+}
+
 .why-closing {
   font-size: 1.05rem;
   font-weight: 500;
