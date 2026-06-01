@@ -390,6 +390,27 @@
   color: var(--color-accent-hover);
 }
 
+/* Call-to-action callout inside a post */
+.post-cta {
+  margin: 2.5rem 0 1rem;
+  padding: 1.75rem 2rem;
+  background: rgba(0, 180, 216, 0.06);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: var(--radius-md);
+}
+
+.post-cta h2 {
+  margin-top: 0;
+}
+
+.post-cta .btn {
+  text-decoration: none;
+}
+
+.post-cta p:last-child {
+  margin-bottom: 0;
+}
+
 /* ── Post Footer ────────────────────────────────────────────── */
 .post-footer {
   margin-top: 4rem;
