@@ -752,6 +752,32 @@ ul {
   line-height: 1.65;
 }
 
+.methodology-card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.methodology-card-link:hover {
+  border-color: rgba(0, 180, 216, 0.45);
+}
+
+.methodology-card-cue {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+}
+
+.methodology-card-link:hover .methodology-card-cue {
+  text-decoration: underline;
+}
+
 /* Why It Matters */
 .why-matters-block {
   margin-bottom: 2rem;
@@ -820,6 +846,27 @@ ul {
 
 .threat-map-figure {
   margin: 2.5rem 0;
+}
+
+.threat-map-link {
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition);
+}
+
+.threat-map-link:hover {
+  transform: translateY(-2px);
+}
+
+.threat-map-link:hover .threat-map-img {
+  border-color: rgba(0, 180, 216, 0.5);
+}
+
+.threat-map-caption-link {
+  margin-left: 0.4rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .threat-map-img {
