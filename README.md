@@ -1,6 +1,6 @@
 # Mitch Kitter — Personal Brand Website
 
-Personal website for Mitch Kitter: Security Architect, Arctic Telecommunications Researcher, and Ph.D. Candidate at the University of Alaska Fairbanks.
+Personal website for Mitch Kitter: Security Architect, Arctic Telecommunications Researcher, and Ph.D. Student at the University of Alaska Fairbanks.
 
 ## Project Structure
 
