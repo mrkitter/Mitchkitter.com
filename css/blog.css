@@ -407,6 +407,12 @@
   text-decoration: none;
 }
 
+/* Keep button label legible (override .post-body a accent color) */
+.post-cta .btn-primary,
+.post-cta .btn-primary:hover {
+  color: var(--color-bg-primary);
+}
+
 .post-cta p:last-child {
   margin-bottom: 0;
 }
