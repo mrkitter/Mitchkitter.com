@@ -365,11 +365,12 @@
 .post-body figure img {
   border-radius: var(--radius-md);
   width: 100%;
+  height: auto;
 }
 
 .post-body figure.figure-portrait img {
   display: block;
-  max-width: 440px;
+  max-width: 520px;
   height: auto;
   margin: 0 auto;
 }
