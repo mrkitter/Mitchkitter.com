@@ -10,7 +10,7 @@
 
   <url>
     <loc>https://mitchkitter.com/blog.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -18,6 +18,13 @@
   <url>
     <loc>https://mitchkitter.com/blog/alaska-cyber-group-2026.html</loc>
     <lastmod>2026-06-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mitchkitter.com/blog/ua-ai-symposium-2026.html</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
   </url>

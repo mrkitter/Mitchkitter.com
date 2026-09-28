@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Power, Phishing, and the New Perimeter: Takeaways from the UA AI Symposium | Mitch Kitter</title>
+  <meta name="description" content="I moderated the Infrastructure, Security &amp; AI panel at the second University of Alaska AI Symposium. Here's what Alaska's IT, security, and infrastructure leaders said about power, latency, AI-driven attacks, and non-human identity." />
+  <link rel="canonical" href="https://mitchkitter.com/blog/ua-ai-symposium-2026.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mitchkitter.com/blog/ua-ai-symposium-2026.html" />
+  <meta property="og:title" content="Power, Phishing, and the New Perimeter: Takeaways from the UA AI Symposium" />
+  <meta property="og:description" content="I moderated the Infrastructure, Security &amp; AI panel at the second University of Alaska AI Symposium. Here's what Alaska's IT, security, and infrastructure leaders said about power, latency, AI-driven attacks, and non-human identity." />
+  <meta property="og:image" content="https://mitchkitter.com/assets/images/og-ua-ai-symposium-2026.jpg" />
+  <meta property="article:author" content="Mitch Kitter" />
+  <meta property="article:published_time" content="2026-09-28" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header scrolled" id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-wordmark">MITCH KITTER</a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#research" class="nav-link">Research</a></li>
+        <li><a href="../index.html#cv" class="nav-link">CV</a></li>
+        <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">&times;</button>
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="../index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="../index.html#research" class="mobile-nav-link">Research</a></li>
+        <li><a href="../index.html#cv" class="mobile-nav-link">CV</a></li>
+        <li><a href="../blog.html" class="mobile-nav-link">Blog</a></li>
+        <li><a href="../index.html#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <article class="post-page" itemscope itemtype="https://schema.org/BlogPosting">
+
+      <!-- POST HEADER -->
+      <header class="post-header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="../blog.html">Blog</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">UA AI Symposium 2026</span>
+          </nav>
+
+          <div class="post-meta">
+            <span class="blog-tag">Cybersecurity</span>
+            <time datetime="2026-09-28" itemprop="datePublished">September 28, 2026</time>
+            <span class="read-time">10 min read</span>
+          </div>
+
+          <h1 class="post-title" itemprop="headline">Power, Phishing, and the New Perimeter: Takeaways from the UA AI Symposium</h1>
+
+          <p class="post-subtitle">I moderated the Infrastructure, Security &amp; AI panel at the second University of Alaska AI Symposium. Here's what Alaska's infrastructure and security leaders had to say, and why it matters for the resilience of the state's critical telecommunications.</p>
+
+          <!-- Author -->
+          <div class="post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <img
+              src="../assets/images/headshot.jpg"
+              alt="Mitch Kitter"
+              class="author-avatar"
+              width="40"
+              height="40"
+              itemprop="image"
+            />
+            <div>
+              <span class="author-name" itemprop="name">Mitch Kitter</span>
+              <span class="author-title">Director, Security Architecture at GCI · Ph.D. Student, UAF</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- POST BODY -->
+      <div class="post-body container" itemprop="articleBody">
+
+        <p>This past weekend, the University of Alaska hosted its second AI Symposium, three days (September 25 to 27) of faculty, students, researchers, IT leaders, and industry partners from across the UA system working through what artificial intelligence means for teaching, research, operations, and the state as a whole. The audience joined both in the room and online, and the conversations ran well past the scheduled sessions.</p>
+
+        <p>I was invited to moderate the <strong>Infrastructure, Security &amp; AI</strong> panel on Saturday morning, and it was one of the best conversations I've been part of this year. The questions we took on, about power, connectivity, attackers, and governance, sit right at the center of my Ph.D. research at the University of Alaska Fairbanks and of my day job leading security architecture and planning at GCI. Hearing them debated by the people who build and defend this infrastructure every day was energizing.</p>
+
+        <figure class="figure-portrait">
+          <img src="../assets/images/post-ua-ai-symposium-2026.jpg" alt="Mitch Kitter smiling outdoors among autumn birch trees and fallen leaves, wearing a gray blazer and a symposium name badge, holding the event program for the Second University of Alaska AI Symposium, September 25 to 27." width="900" height="1200" loading="lazy" />
+          <figcaption>At the second University of Alaska AI Symposium, program in hand.</figcaption>
+        </figure>
+
+        <h2>The panel</h2>
+
+        <p>I was fortunate to share the stage with three leaders who see AI's infrastructure and security impacts from very different vantage points:</p>
+
+        <ul>
+          <li><strong>Shawn Williams</strong>, Vice President of Government Affairs and Strategy at Pacific Data Port, a 45-year Alaskan, former Assistant Commissioner of Commerce for the State of Alaska, and a fellow UAF Ph.D. student studying regulatory economics and public health.</li>
+          <li><strong>Benjamin Shier</strong>, Chief Information Technology Officer for the University of Alaska System, who leads IT strategy and shared technology services for UAA, UAF, and UAS.</li>
+          <li><strong>Ryan McDaniel</strong>, Assistant Vice Chancellor and Chief Information Officer at UAA, with 25 years in higher education IT and doctoral research on international cyber conflict.</li>
+        </ul>
+
+        <p>We were also joined from the audience by <strong>Jeannette Okinczyc</strong>, the University of Alaska's Chief Information Security Officer, who brought the view from the security operations floor. Questions came from the room and from the online audience, relayed by symposium host <strong>Andrew Harnish</strong>.</p>
+
+        <p>I framed the hour around a tension the university has to hold in balance. UA is a <em>customer</em> of AI infrastructure and, increasingly, a potential <em>host</em> of it. It serves researchers, students, faculty, and staff whose needs and attitudes toward AI differ widely. And it has to govern all of that in a way that enables the institution's mission, stays secure, and reflects its values. Here's what stood out.</p>
+
+        <h2>1. If AI demand doubles, power runs out first</h2>
+
+        <p>I asked each panelist a simple question: if AI demand in Alaska doubles over the next three years, what runs out first? Power, middle-mile capacity, skilled people, or governance capacity?</p>
+
+        <p>Shawn didn't hesitate. Pacific Data Port has fielded interest in placing GPU clusters at its Talkeetna teleport, and when the company asked its utility what additional power was available, the answer was three megawatts. Getting roughly 30 more megawatts from the Intertie would cost somewhere between $30 and $40 million, and at that point, as Shawn put it, things "start to not pencil out."</p>
+
+        <blockquote>
+          <p>"I can tell you right now that it's definitely power first, because it doesn't exist."</p>
+          <cite>Shawn Williams, Pacific Data Port</cite>
+        </blockquote>
+
+        <p>He ranked middle mile second, people third, and governance last, not because it doesn't matter, but because "it'll come along and it'll just be a little late." Ryan agreed power becomes the binding constraint as demand grows, though he argued governance is the biggest vacuum <em>today</em>. He also made a point I hadn't fully considered: frontier AI providers are currently subsidizing usage, and as prices eventually rise, organizations will shift more work to local models running on their own hardware. That drives demand for local compute and co-location, and in Alaska that demand lands squarely on the power grid.</p>
+
+        <p>Ben added a wrinkle that I think deserves more attention. After years of moving workloads out of in-state data centers and into the cloud because the economics made sense, institutions are now asking whether AI makes it worth running things locally again. If the answer is yes, "power becomes your number one issue, because we just don't have that kind of excess power." Ryan sharpened it further: it isn't only capacity, it's cost. Elsewhere, compute simply migrates to wherever the kilowatt-hour is cheapest. If Alaska wants AI capacity that isn't dependent on an undersea cable to the Lower 48, it doesn't have that option.</p>
+
+        <h2>2. Latency and sovereignty decide what belongs in Alaska</h2>
+
+        <p>That led naturally to the question of which workloads actually make sense to host here. Shawn walked the room through the physics: a round trip from Anchorage to Seattle over fiber runs roughly 40 to 50 milliseconds, but from the North Slope, down the backbone to Seattle, and back, it can approach 80 to 90. Low-earth-orbit satellite service sits in a similar range, while geosynchronous links can reach 650 milliseconds.</p>
+
+        <p>For much of today's AI use, latency barely matters. As Ryan noted, if an agent is building an app for you, you let it run and come back later. But the panel converged on a short list where it matters a great deal:</p>
+
+        <ul>
+          <li><strong>Real-time security response.</strong> In Ryan's words, "if your AI-based response is not keeping up with the AI-based attack, then it's a war of attrition and you're losing."</li>
+          <li><strong>Healthcare.</strong> Dr. Helena Wisniewski, who recently spoke with the Alaska Native Tribal Health Consortium on AI in medicine, pointed out that AI-supported care in rural villages, care that could spare patients a trip to Anchorage, makes latency critical.</li>
+          <li><strong>Research at scale.</strong> Ben described how working with very large research data sets changed his own cloud-first thinking and made a case for keeping some compute on-premises.</li>
+          <li><strong>Defense and data sovereignty.</strong> Shawn summed it up: defense, healthcare, and data sovereignty are all good reasons for localized hosting.</li>
+        </ul>
+
+        <p>An audience member added what I'd call the third leg of the stool. Beyond economics and performance, Alaska's distance from the rest of the country makes domestic and national security a distinct factor. Models that work well in the Lower 48, where data centers can be mirrored across many regions, don't translate cleanly to a state that already has connectivity constraints. Another participant noted that the most capable frontier models are exactly what defenders will need to keep up with AI-discovered vulnerabilities, so Alaska will likely need <em>hybrid</em> capability: strong local capacity, plus access to frontier models. The piece I keep returning to is the ability to respond <em>independently</em> of our connections to the Lower 48 when those connections are degraded or cut.</p>
+
+        <h2>3. Attackers are adopting AI as fast as defenders</h2>
+
+        <p>When I asked what single AI-driven change had most altered their infrastructure or security planning in the last 18 months, Ben's answer was immediate: phishing. Despite years of anti-phishing investment, AI-generated phishing has become faster and more sophisticated, driving a significant increase in successful attacks, including attempts to reroute employee paychecks.</p>
+
+        <p>Jeannette put numbers to it. Her team's daily time spent responding to phishing, pulling messages from inboxes, contacting users, resetting credentials, grew from about 90 minutes a day to 12 to 14 hours a day over roughly a year. A small team simply could not keep pace, so the university invested in AI-driven phishing response and began automating parts of incident response, using local models to evaluate the likelihood of a false positive before letting automation act. It has already paid dividends. Her summary was blunt: "people can't keep up with AI."</p>
+
+        <p>Asked which control she was least confident in, she named the one most security leaders would: vulnerability management and patching. Ryan predicted it will get harder, not easier, as vendors use AI to find flaws in their own products and push fixes faster than organizations can absorb them. He also raised a quieter consequence: attribution. Investigators have long identified attackers by their fingerprints, familiar tooling, code habits, and techniques. When an attacker simply tells an AI to "go hack," those fingerprints blur, and knowing who is behind an intrusion gets harder still.</p>
+
+        <p>Ben captured the paradox of the moment in a single line:</p>
+
+        <blockquote>
+          <p>"Even though the castle walls are higher, the enemy has tanks that are 10 times more capable than five years ago."</p>
+          <cite>Benjamin Shier, University of Alaska System</cite>
+        </blockquote>
+
+        <p>An organization can meaningfully improve its security posture and still end up relatively <em>less</em> secure, because the threat is improving faster. As Ben said, it depends on the day.</p>
+
+        <h2>4. The perimeter has moved to identity and non-human actors</h2>
+
+        <p>Ryan's answer to the 18-month question is the one I've thought about most since. Building an application used to mean asking IT to build it. Now anyone can build their own app or agent in an afternoon, and what they show up asking IT for is <em>data</em>.</p>
+
+        <blockquote>
+          <p>"So the perimeter that we control has shifted."</p>
+          <cite>Ryan McDaniel, University of Alaska Anchorage</cite>
+        </blockquote>
+
+        <p>That shift creates two new layers of work. One is infrastructure: integrations, API control, and control over how agents interact with systems through protocols like MCP. The other is policy: the rules of play for self-built apps, such as requiring code to live in a managed repository where security teams can scan it for mistakes like secrets left in source, which, as Ryan noted, agents will absolutely do.</p>
+
+        <p>Then there's identity. If a business process requires a human in the loop, authorization has to enforce that. When an AI agent logs into an ERP system on your behalf, it shouldn't inherit everything you can do. It "should be able to do some subset of what I can do, not all of it," which means agents need their own credentials and their own scoped authorizations. Most identity infrastructure was never designed for that.</p>
+
+        <p>The policy discussion reinforced the gap. Across the panel, written AI policies, assessed tools, and published guidance exist, but the systemic controls to see or stop inappropriate data sharing largely don't yet. Shawn noted that the biggest vulnerability remains the human who pastes something proprietary into an unapproved tool. Ryan described banning one meeting-transcription tool that was spreading through the community almost like a worm, and made the important point that a single approved list doesn't fit a university: what's appropriate for institutional data differs from what's appropriate for research or teaching. The honest summary is that <strong>policy is ahead of enforcement</strong>, and identity, access, and governance for non-human actors are now core security work.</p>
+
+        <h2>5. What Juneau should know</h2>
+
+        <p>In a lightning round, I asked what good AI infrastructure policy looks like for Alaska. Shawn suggested repurposing the Alaska Broadband Office, created to distribute federal broadband funding, toward a broader mandate for Alaska's telecommunications infrastructure. Ben tied everything back to energy: so much of what the state can do in AI, local models, and cybersecurity depends on solving its energy challenges. And Ryan urged legislators to look beyond technology to the societal and economic impacts, which he described as "industrial revolution times five."</p>
+
+        <p>Diane Hirschberg from UAA pushed the energy question further from the audience: if growing demand can lower energy costs over time, and if sovereign AI capacity is a genuine security and productivity issue for Alaska, what investment should the state be willing to make, and how do we have that conversation? It's the right question, and it doesn't have an easy answer.</p>
+
+        <h2>Why this matters for my research</h2>
+
+        <p>My dissertation examines the cyber and physical security and resilience of Alaska's critical telecommunications infrastructure, and in particular how the state's telecom security leaders prioritize risk when resources are finite. This panel surfaced nearly every thread I'm pulling on:</p>
+
+        <ul>
+          <li><strong>Interdependence.</strong> Telecommunications and energy are inseparable in Alaska. Compute ambitions here live or die on power, and the resilience of our networks depends on the resilience of the grid that feeds them.</li>
+          <li><strong>Geography as a risk factor.</strong> Latency, limited path diversity, and reliance on long-haul links to the Lower 48 aren't abstractions. They shape what can be hosted here, how quickly we can respond to an incident, and how we operate if a link goes dark.</li>
+          <li><strong>Resource-constrained defense.</strong> A phishing workload that grows from 90 minutes to 14 hours a day is exactly the kind of pressure that forces leaders to choose between competing risks. Understanding how those choices get made is at the heart of my research.</li>
+          <li><strong>Governance lag.</strong> When policy moves slower than adoption, and controls lag behind policy, risk accumulates in the gap. Non-human identity may be the clearest example we have right now.</li>
+        </ul>
+
+        <p>I left the room with more questions than I brought, which is the best outcome a panel can have.</p>
+
+        <h2>Thank you</h2>
+
+        <p>Huge thanks to Shawn Williams, Benjamin Shier, and Ryan McDaniel for their candor and insight, and to Jeannette Okinczyc for jumping in from the audience. Special thanks to Dr. Helena S. Wisniewski and Andrew Harnish for organizing such a thoughtful event, and to everyone in the room and online who asked questions and pushed the conversation forward.</p>
+
+        <p>And one fun full-circle moment: years ago, I was a student in Helena's first AI course at the University of Alaska Anchorage College of Business and Public Policy. That course laid part of the foundation for my being able to moderate this conversation. It was a privilege to be back in a room she helped build.</p>
+
+        <div class="post-cta">
+          <h2>Let's keep the conversation going</h2>
+          <p>If you work on security, resilience, or infrastructure for Alaska's critical telecommunications, I'd love to hear how these questions look from your seat.</p>
+          <p>Reach out at <a href="mailto:mrkitter@alaska.edu">mrkitter@alaska.edu</a> or connect on <a href="https://www.linkedin.com/in/mitchkitter/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        </div>
+
+      </div>
+
+      <!-- POST FOOTER -->
+      <footer class="post-footer">
+        <div class="container">
+          <!-- Tags -->
+          <div class="post-tags">
+            <span class="post-tags-label">Tags:</span>
+            <a href="../blog.html" class="blog-tag">Cybersecurity</a>
+            <a href="../blog.html" class="blog-tag">AI</a>
+            <a href="../blog.html" class="blog-tag">Arctic</a>
+            <a href="../blog.html" class="blog-tag">Research</a>
+          </div>
+
+          <!-- Author bio -->
+          <div class="author-bio-card">
+            <img
+              src="../assets/images/headshot.jpg"
+              alt="Mitch Kitter"
+              class="author-bio-avatar"
+              width="72"
+              height="72"
+            />
+            <div class="author-bio-text">
+              <span class="author-bio-name">Mitch Kitter</span>
+              <p>Director of Security Architecture at GCI and Ph.D. student at the University of Alaska Fairbanks. Researching cybersecurity and resilience of Alaska's critical telecommunications infrastructure.</p>
+              <a href="../index.html#about" class="author-bio-link">About Mitch →</a>
+            </div>
+          </div>
+
+          <!-- Navigation between posts -->
+          <nav class="post-nav" aria-label="Post navigation">
+            <a href="../blog.html" class="post-nav-back">← Back to all posts</a>
+          </nav>
+
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="../index.html" class="footer-wordmark">MITCH KITTER</a>
+        <p class="footer-tagline">Security Leader · Arctic Researcher · Ph.D. Student</p>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#research">Research</a></li>
+            <li><a href="../index.html#cv">CV</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="current-year">2026</span> Mitch Kitter. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
