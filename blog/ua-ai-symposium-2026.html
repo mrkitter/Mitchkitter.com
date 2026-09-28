@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/blog.css?v=2" />
 </head>
 <body>
 
@@ -78,7 +78,7 @@
           <div class="post-meta">
             <span class="blog-tag">Cybersecurity</span>
             <time datetime="2026-09-28" itemprop="datePublished">September 28, 2026</time>
-            <span class="read-time">10 min read</span>
+            <span class="read-time">3 min read</span>
           </div>
 
           <h1 class="post-title" itemprop="headline">Power, Phishing, and the New Perimeter: Takeaways from the UA AI Symposium</h1>
@@ -106,116 +106,36 @@
       <!-- POST BODY -->
       <div class="post-body container" itemprop="articleBody">
 
-        <p>This past weekend, the University of Alaska hosted its second AI Symposium, three days (September 25 to 27) of faculty, students, researchers, IT leaders, and industry partners from across the UA system working through what artificial intelligence means for teaching, research, operations, and the state as a whole. The audience joined both in the room and online, and the conversations ran well past the scheduled sessions.</p>
+        <p>This past weekend, the University of Alaska hosted its second AI Symposium (September 25 to 27), bringing together faculty, students, IT leaders, and industry partners from across the UA system, in person and online. I was invited to moderate the <strong>Infrastructure, Security &amp; AI</strong> panel, and it was one of the best conversations I've been part of this year.</p>
 
-        <p>I was invited to moderate the <strong>Infrastructure, Security &amp; AI</strong> panel on Saturday morning, and it was one of the best conversations I've been part of this year. The questions we took on, about power, connectivity, attackers, and governance, sit right at the center of my Ph.D. research at the University of Alaska Fairbanks and of my day job leading security architecture and planning at GCI. Hearing them debated by the people who build and defend this infrastructure every day was energizing.</p>
-
-        <figure class="figure-portrait">
-          <img src="../assets/images/post-ua-ai-symposium-2026.jpg" alt="Mitch Kitter smiling outdoors among autumn birch trees and fallen leaves, wearing a gray blazer and a symposium name badge, holding the event program for the Second University of Alaska AI Symposium, September 25 to 27." width="900" height="1200" loading="lazy" />
-          <figcaption>At the second University of Alaska AI Symposium, program in hand.</figcaption>
+        <figure>
+          <img src="../assets/images/post-ua-ai-symposium-2026.jpg" alt="Mitch Kitter smiling outdoors among autumn trees and fallen leaves, wearing a gray blazer, plaid shirt, and symposium name badge on a green lanyard." width="1125" height="750" loading="lazy" />
+          <figcaption>At the second University of Alaska AI Symposium.</figcaption>
         </figure>
 
-        <h2>The panel</h2>
+        <p>I was joined by <strong>Shawn Williams</strong> (VP of Government Affairs and Strategy, Pacific Data Port), <strong>Benjamin Shier</strong> (Chief Information Technology Officer, University of Alaska System), and <strong>Ryan McDaniel</strong> (CIO, UAA), with UA CISO <strong>Jeannette Okinczyc</strong> contributing from the audience. Here's what stood out.</p>
 
-        <p>I was fortunate to share the stage with three leaders who see AI's infrastructure and security impacts from very different vantage points:</p>
+        <h2>Power runs out first</h2>
 
-        <ul>
-          <li><strong>Shawn Williams</strong>, Vice President of Government Affairs and Strategy at Pacific Data Port, a 45-year Alaskan, former Assistant Commissioner of Commerce for the State of Alaska, and a fellow UAF Ph.D. student studying regulatory economics and public health.</li>
-          <li><strong>Benjamin Shier</strong>, Chief Information Technology Officer for the University of Alaska System, who leads IT strategy and shared technology services for UAA, UAF, and UAS.</li>
-          <li><strong>Ryan McDaniel</strong>, Assistant Vice Chancellor and Chief Information Officer at UAA, with 25 years in higher education IT and doctoral research on international cyber conflict.</li>
-        </ul>
+        <p>When I asked what runs out first if AI demand in Alaska doubles, power came up fast. Shawn described a utility offering three megawatts for a GPU project, with 30 more costing $30 to 40 million. "It's definitely power first," he said, "because it doesn't exist." Ben noted that AI is reopening the cloud-versus-local question, and if local wins, power becomes the number one issue. Compute ambitions here live or die on energy.</p>
 
-        <p>We were also joined from the audience by <strong>Jeannette Okinczyc</strong>, the University of Alaska's Chief Information Security Officer, who brought the view from the security operations floor. Questions came from the room and from the online audience, relayed by symposium host <strong>Andrew Harnish</strong>.</p>
+        <h2>Latency and sovereignty shape what belongs here</h2>
 
-        <p>I framed the hour around a tension the university has to hold in balance. UA is a <em>customer</em> of AI infrastructure and, increasingly, a potential <em>host</em> of it. It serves researchers, students, faculty, and staff whose needs and attitudes toward AI differ widely. And it has to govern all of that in a way that enables the institution's mission, stays secure, and reflects its values. Here's what stood out.</p>
+        <p>A round trip from the North Slope to Seattle can approach 90 milliseconds. For most AI work that barely matters, but for real-time security response, rural healthcare, research data, and defense, it does. The panel and audience kept returning to Alaska's need to operate independently of its links to the Lower 48.</p>
 
-        <h2>1. If AI demand doubles, power runs out first</h2>
+        <h2>Attackers are adopting AI as fast as defenders</h2>
 
-        <p>I asked each panelist a simple question: if AI demand in Alaska doubles over the next three years, what runs out first? Power, middle-mile capacity, skilled people, or governance capacity?</p>
+        <p>Jeannette shared that her team's daily phishing response grew from about 90 minutes to 12 to 14 hours in roughly a year, forcing an investment in AI-driven defense because "people can't keep up with AI." Ben put it best: "Even though the castle walls are higher, the enemy has tanks that are 10 times more capable than five years ago."</p>
 
-        <p>Shawn didn't hesitate. Pacific Data Port has fielded interest in placing GPU clusters at its Talkeetna teleport, and when the company asked its utility what additional power was available, the answer was three megawatts. Getting roughly 30 more megawatts from the Intertie would cost somewhere between $30 and $40 million, and at that point, as Shawn put it, things "start to not pencil out."</p>
+        <h2>The perimeter has moved</h2>
 
-        <blockquote>
-          <p>"I can tell you right now that it's definitely power first, because it doesn't exist."</p>
-          <cite>Shawn Williams, Pacific Data Port</cite>
-        </blockquote>
+        <p>Ryan observed that as people build their own apps and agents, what they ask IT for is data. "The perimeter that we control has shifted." An agent acting on your behalf should get "some subset of what I can do, not all of it," with its own credentials. Identity, access, and governance for non-human actors are now core security work, and across the panel, policy is running ahead of enforcement.</p>
 
-        <p>He ranked middle mile second, people third, and governance last, not because it doesn't matter, but because "it'll come along and it'll just be a little late." Ryan agreed power becomes the binding constraint as demand grows, though he argued governance is the biggest vacuum <em>today</em>. He also made a point I hadn't fully considered: frontier AI providers are currently subsidizing usage, and as prices eventually rise, organizations will shift more work to local models running on their own hardware. That drives demand for local compute and co-location, and in Alaska that demand lands squarely on the power grid.</p>
+        <h2>Why it matters for my research</h2>
 
-        <p>Ben added a wrinkle that I think deserves more attention. After years of moving workloads out of in-state data centers and into the cloud because the economics made sense, institutions are now asking whether AI makes it worth running things locally again. If the answer is yes, "power becomes your number one issue, because we just don't have that kind of excess power." Ryan sharpened it further: it isn't only capacity, it's cost. Elsewhere, compute simply migrates to wherever the kilowatt-hour is cheapest. If Alaska wants AI capacity that isn't dependent on an undersea cable to the Lower 48, it doesn't have that option.</p>
+        <p>My Ph.D. research at UAF examines the security and resilience of Alaska's critical telecommunications infrastructure, and how security leaders prioritize risk when resources are finite. This panel touched every thread: the interdependence of telecom and energy, geography as a risk factor, defenders stretched by AI-scale threats, and governance lagging adoption. These questions also shape how we think about security architecture every day at GCI.</p>
 
-        <h2>2. Latency and sovereignty decide what belongs in Alaska</h2>
-
-        <p>That led naturally to the question of which workloads actually make sense to host here. Shawn walked the room through the physics: a round trip from Anchorage to Seattle over fiber runs roughly 40 to 50 milliseconds, but from the North Slope, down the backbone to Seattle, and back, it can approach 80 to 90. Low-earth-orbit satellite service sits in a similar range, while geosynchronous links can reach 650 milliseconds.</p>
-
-        <p>For much of today's AI use, latency barely matters. As Ryan noted, if an agent is building an app for you, you let it run and come back later. But the panel converged on a short list where it matters a great deal:</p>
-
-        <ul>
-          <li><strong>Real-time security response.</strong> In Ryan's words, "if your AI-based response is not keeping up with the AI-based attack, then it's a war of attrition and you're losing."</li>
-          <li><strong>Healthcare.</strong> Dr. Helena Wisniewski, who recently spoke with the Alaska Native Tribal Health Consortium on AI in medicine, pointed out that AI-supported care in rural villages, care that could spare patients a trip to Anchorage, makes latency critical.</li>
-          <li><strong>Research at scale.</strong> Ben described how working with very large research data sets changed his own cloud-first thinking and made a case for keeping some compute on-premises.</li>
-          <li><strong>Defense and data sovereignty.</strong> Shawn summed it up: defense, healthcare, and data sovereignty are all good reasons for localized hosting.</li>
-        </ul>
-
-        <p>An audience member added what I'd call the third leg of the stool. Beyond economics and performance, Alaska's distance from the rest of the country makes domestic and national security a distinct factor. Models that work well in the Lower 48, where data centers can be mirrored across many regions, don't translate cleanly to a state that already has connectivity constraints. Another participant noted that the most capable frontier models are exactly what defenders will need to keep up with AI-discovered vulnerabilities, so Alaska will likely need <em>hybrid</em> capability: strong local capacity, plus access to frontier models. The piece I keep returning to is the ability to respond <em>independently</em> of our connections to the Lower 48 when those connections are degraded or cut.</p>
-
-        <h2>3. Attackers are adopting AI as fast as defenders</h2>
-
-        <p>When I asked what single AI-driven change had most altered their infrastructure or security planning in the last 18 months, Ben's answer was immediate: phishing. Despite years of anti-phishing investment, AI-generated phishing has become faster and more sophisticated, driving a significant increase in successful attacks, including attempts to reroute employee paychecks.</p>
-
-        <p>Jeannette put numbers to it. Her team's daily time spent responding to phishing, pulling messages from inboxes, contacting users, resetting credentials, grew from about 90 minutes a day to 12 to 14 hours a day over roughly a year. A small team simply could not keep pace, so the university invested in AI-driven phishing response and began automating parts of incident response, using local models to evaluate the likelihood of a false positive before letting automation act. It has already paid dividends. Her summary was blunt: "people can't keep up with AI."</p>
-
-        <p>Asked which control she was least confident in, she named the one most security leaders would: vulnerability management and patching. Ryan predicted it will get harder, not easier, as vendors use AI to find flaws in their own products and push fixes faster than organizations can absorb them. He also raised a quieter consequence: attribution. Investigators have long identified attackers by their fingerprints, familiar tooling, code habits, and techniques. When an attacker simply tells an AI to "go hack," those fingerprints blur, and knowing who is behind an intrusion gets harder still.</p>
-
-        <p>Ben captured the paradox of the moment in a single line:</p>
-
-        <blockquote>
-          <p>"Even though the castle walls are higher, the enemy has tanks that are 10 times more capable than five years ago."</p>
-          <cite>Benjamin Shier, University of Alaska System</cite>
-        </blockquote>
-
-        <p>An organization can meaningfully improve its security posture and still end up relatively <em>less</em> secure, because the threat is improving faster. As Ben said, it depends on the day.</p>
-
-        <h2>4. The perimeter has moved to identity and non-human actors</h2>
-
-        <p>Ryan's answer to the 18-month question is the one I've thought about most since. Building an application used to mean asking IT to build it. Now anyone can build their own app or agent in an afternoon, and what they show up asking IT for is <em>data</em>.</p>
-
-        <blockquote>
-          <p>"So the perimeter that we control has shifted."</p>
-          <cite>Ryan McDaniel, University of Alaska Anchorage</cite>
-        </blockquote>
-
-        <p>That shift creates two new layers of work. One is infrastructure: integrations, API control, and control over how agents interact with systems through protocols like MCP. The other is policy: the rules of play for self-built apps, such as requiring code to live in a managed repository where security teams can scan it for mistakes like secrets left in source, which, as Ryan noted, agents will absolutely do.</p>
-
-        <p>Then there's identity. If a business process requires a human in the loop, authorization has to enforce that. When an AI agent logs into an ERP system on your behalf, it shouldn't inherit everything you can do. It "should be able to do some subset of what I can do, not all of it," which means agents need their own credentials and their own scoped authorizations. Most identity infrastructure was never designed for that.</p>
-
-        <p>The policy discussion reinforced the gap. Across the panel, written AI policies, assessed tools, and published guidance exist, but the systemic controls to see or stop inappropriate data sharing largely don't yet. Shawn noted that the biggest vulnerability remains the human who pastes something proprietary into an unapproved tool. Ryan described banning one meeting-transcription tool that was spreading through the community almost like a worm, and made the important point that a single approved list doesn't fit a university: what's appropriate for institutional data differs from what's appropriate for research or teaching. The honest summary is that <strong>policy is ahead of enforcement</strong>, and identity, access, and governance for non-human actors are now core security work.</p>
-
-        <h2>5. What Juneau should know</h2>
-
-        <p>In a lightning round, I asked what good AI infrastructure policy looks like for Alaska. Shawn suggested repurposing the Alaska Broadband Office, created to distribute federal broadband funding, toward a broader mandate for Alaska's telecommunications infrastructure. Ben tied everything back to energy: so much of what the state can do in AI, local models, and cybersecurity depends on solving its energy challenges. And Ryan urged legislators to look beyond technology to the societal and economic impacts, which he described as "industrial revolution times five."</p>
-
-        <p>Diane Hirschberg from UAA pushed the energy question further from the audience: if growing demand can lower energy costs over time, and if sovereign AI capacity is a genuine security and productivity issue for Alaska, what investment should the state be willing to make, and how do we have that conversation? It's the right question, and it doesn't have an easy answer.</p>
-
-        <h2>Why this matters for my research</h2>
-
-        <p>My dissertation examines the cyber and physical security and resilience of Alaska's critical telecommunications infrastructure, and in particular how the state's telecom security leaders prioritize risk when resources are finite. This panel surfaced nearly every thread I'm pulling on:</p>
-
-        <ul>
-          <li><strong>Interdependence.</strong> Telecommunications and energy are inseparable in Alaska. Compute ambitions here live or die on power, and the resilience of our networks depends on the resilience of the grid that feeds them.</li>
-          <li><strong>Geography as a risk factor.</strong> Latency, limited path diversity, and reliance on long-haul links to the Lower 48 aren't abstractions. They shape what can be hosted here, how quickly we can respond to an incident, and how we operate if a link goes dark.</li>
-          <li><strong>Resource-constrained defense.</strong> A phishing workload that grows from 90 minutes to 14 hours a day is exactly the kind of pressure that forces leaders to choose between competing risks. Understanding how those choices get made is at the heart of my research.</li>
-          <li><strong>Governance lag.</strong> When policy moves slower than adoption, and controls lag behind policy, risk accumulates in the gap. Non-human identity may be the clearest example we have right now.</li>
-        </ul>
-
-        <p>I left the room with more questions than I brought, which is the best outcome a panel can have.</p>
-
-        <h2>Thank you</h2>
-
-        <p>Huge thanks to Shawn Williams, Benjamin Shier, and Ryan McDaniel for their candor and insight, and to Jeannette Okinczyc for jumping in from the audience. Special thanks to Dr. Helena S. Wisniewski and Andrew Harnish for organizing such a thoughtful event, and to everyone in the room and online who asked questions and pushed the conversation forward.</p>
-
-        <p>And one fun full-circle moment: years ago, I was a student in Helena's first AI course at the University of Alaska Anchorage College of Business and Public Policy. That course laid part of the foundation for my being able to moderate this conversation. It was a privilege to be back in a room she helped build.</p>
-
+        <p>Huge thanks to Shawn, Ben, and Ryan for their candor, to Jeannette for jumping in, and to Dr. Helena S. Wisniewski and Andrew Harnish for organizing such a thoughtful event. A fun full-circle moment: I was a student in Helena's first AI course at the UAA College of Business and Public Policy years ago.</p>
         <div class="post-cta">
           <h2>Let's keep the conversation going</h2>
           <p>If you work on security, resilience, or infrastructure for Alaska's critical telecommunications, I'd love to hear how these questions look from your seat.</p>
