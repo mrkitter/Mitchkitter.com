@@ -367,6 +367,13 @@
   width: 100%;
 }
 
+.post-body figure.figure-portrait img {
+  display: block;
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .post-body figcaption {
   font-size: 0.82rem;
   color: var(--color-text-secondary);
