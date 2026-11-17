@@ -844,6 +844,12 @@ ul {
   margin: 0;
 }
 
+/* Mirrored row (image on the left); stacks text-then-image on mobile like the first row */
+.why-intro-row--reverse {
+  flex-direction: row-reverse;
+  margin-top: 2.5rem;
+}
+
 .threat-map-figure {
   margin: 2.5rem 0;
 }
