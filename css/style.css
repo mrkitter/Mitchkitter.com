@@ -1141,11 +1141,19 @@ ul {
 }
 
 .blog-card {
+  display: flex;
+  flex-direction: column;
   background: var(--color-bg-card);
   border: 1px solid var(--color-divider);
   border-radius: var(--radius-md);
   padding: 1.75rem;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+/* Keep "Read more" on the bottom line so the three cards line up */
+.blog-card .blog-read-more {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .blog-card:hover {
@@ -1202,6 +1210,12 @@ ul {
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 1.25rem;
+  /* summaries come from blog.html and vary in length; show four lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .blog-read-more {

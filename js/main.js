@@ -1,7 +1,8 @@
 /**
  * main.js — Mitch Kitter Personal Brand Website
  * Handles: navigation, smooth scroll, mobile menu,
- *          scroll-spy, fade-in animations, footer year.
+ *          scroll-spy, fade-in animations, footer year,
+ *          and the homepage Insights cards (three newest posts).
  */
 
 (function () {
@@ -163,6 +164,78 @@
       }, i * 120);
     });
   });
+
+  /* ── Insights: always show the 3 newest posts ───────────── */
+  // blog.html is the list of posts. The homepage reads it and shows the three
+  // newest by date, so adding a post there updates the homepage too. If the
+  // fetch fails, the cards written into index.html stay as they are.
+  var insightsGrid = document.querySelector('.blog-preview .blog-cards-grid');
+
+  function buildInsightCard(post) {
+    function el(tag, className, text) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    }
+    var card = el('article', 'blog-card');
+    var meta = el('div', 'blog-card-meta');
+    var time = el('time', '', post.dateText);
+    time.setAttribute('datetime', post.date);
+    meta.appendChild(time);
+    if (post.tag) meta.appendChild(el('span', 'blog-tag', post.tag));
+    var title = el('h3', 'blog-card-title');
+    var titleLink = el('a', '', post.title);
+    titleLink.href = post.href;
+    title.appendChild(titleLink);
+    var more = el('a', 'blog-read-more', 'Read more →');
+    more.href = post.href;
+    card.appendChild(meta);
+    card.appendChild(title);
+    if (post.excerpt) card.appendChild(el('p', 'blog-card-excerpt', post.excerpt));
+    card.appendChild(more);
+    return card;
+  }
+
+  if (insightsGrid && window.fetch && window.DOMParser) {
+    fetch('blog.html', { cache: 'no-cache' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('blog.html ' + res.status);
+        return res.text();
+      })
+      .then(function (html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var posts = [];
+        doc.querySelectorAll('.blog-list-item').forEach(function (item) {
+          var time = item.querySelector('time[datetime]');
+          var link = item.querySelector('.blog-list-item-title a');
+          var tag = item.querySelector('.blog-tag');
+          var excerpt = item.querySelector('.blog-list-item-excerpt');
+          var href = link ? link.getAttribute('href') : '';
+          // only local post pages, e.g. blog/some-post.html
+          if (!time || !link || !/^blog\/[\w.-]+\.html$/.test(href)) return;
+          posts.push({
+            date: time.getAttribute('datetime'),
+            dateText: time.textContent.trim(),
+            tag: tag ? tag.textContent.trim() : '',
+            title: link.textContent.trim(),
+            href: href,
+            excerpt: excerpt ? excerpt.textContent.replace(/\s+/g, ' ').trim() : ''
+          });
+        });
+        if (!posts.length) return;
+        posts.sort(function (a, b) {
+          return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+        });
+        var cards = document.createDocumentFragment();
+        posts.slice(0, 3).forEach(function (post) {
+          cards.appendChild(buildInsightCard(post));
+        });
+        while (insightsGrid.firstChild) insightsGrid.removeChild(insightsGrid.firstChild);
+        insightsGrid.appendChild(cards);
+      })
+      .catch(function () { /* keep the cards already in the page */ });
+  }
 
   /* ── Scroll-linked hero parallax (subtle) ───────────────── */
   var heroBg = document.querySelector('.hero-bg');

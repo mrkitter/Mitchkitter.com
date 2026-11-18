@@ -84,7 +84,7 @@ All placeholder image references in the HTML are marked with `<!-- PLACEHOLDER: 
 1. Duplicate `blog/post-template.html` and rename it (e.g., `blog/llms-loose-lips-multipliers.html`)
 2. Replace all `[PLACEHOLDER]` values in the new file with actual content
 3. Add the post to `blog.html` by uncommenting the blog card template and filling it in
-4. Add a preview card to the blog section in `index.html`
+4. The homepage Insights section updates itself: `js/main.js` reads `blog.html` and shows the three newest posts by date. For visitors without JavaScript, you can also refresh the fallback cards in the blog section of `index.html`
 5. Update `sitemap.xml` with the new post URL
 
 ## Updating Content
